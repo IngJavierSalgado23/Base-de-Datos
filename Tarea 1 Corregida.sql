@@ -1,4 +1,4 @@
-
+--Se corrigio el ultimo ejercicio (5) que estaba erroneo
 --1 Obtener la fecha y total de la compra mas reciente de cada cliente
 select cus.f_name || ' '|| cus.l_name as cliente, ou_q.ultima_compra, in_q.order_id, in_q.total from (select max(fecha) as ultima_compra, customer_id from javier.orders group by customer_id) ou_q inner join 
 (SELECT ord.order_id,
